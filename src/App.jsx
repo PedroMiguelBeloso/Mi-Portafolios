@@ -1,17 +1,13 @@
-import React from "react";
+import { Outlet } from "react-router-dom";
 import Header from "./components/Header";
-import About from "./components/About";
-import Projects from "./components/Projects";
 import Footer from "./components/Footer";
-import "./index.css";
 
 export default function App() {
   return (
     <>
-      <Header />
+      <Header /> {/* Los botones volverán aquí */}
       <main className="container">
-        <About />
-        <Projects />
+        <Outlet /> {/* Aquí se renderizan las subpáginas */}
       </main>
       <Footer />
     </>

@@ -1,7 +1,9 @@
+import React from "react";
+
 export default function About() {
   return (
-    <section id="about" className="about">
-      <h2>Sobre mí</h2>
+    <section id="about">
+       <h2>Sobre mí</h2>
       <p className="text-lg text-gray-700 leading-relaxed">
         Soy estudiante de <strong>Analista de Sistemas en la ORT</strong> y
         actualmente estoy buscando mi primera experiencia en el mundo IT, tanto
@@ -15,6 +17,11 @@ export default function About() {
         También me interesa incursionar en el <strong>mundo docente</strong>,
         compartiendo lo que aprendo y ayudando a otros a crecer.
       </p>
+      <h3>Formación</h3>
+      <ul>
+        <li>Analista de Sistemas — ORT (actualmente cursando)</li>
+        <li>Técnico Informático y personal de programacion — Secundario</li>
+      </ul>
     </section>
   );
 }
