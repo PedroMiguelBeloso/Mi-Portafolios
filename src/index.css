@@ -12,6 +12,7 @@ html, body {
   color: #e0e0e0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 a {
@@ -24,9 +25,9 @@ a {
   flex-direction: column;
   min-height: 100vh;
   width: 100%;
-  overflow-x: hidden; /* evita cortes horizontales */
 }
 
+/* === CONTENEDOR CENTRAL === */
 .container {
   flex: 1;
   padding: 20px 15px;
@@ -37,24 +38,31 @@ a {
 
 /* === HEADER === */
 .header {
-  width: 100vw;
+  width: 100%;
   background: linear-gradient(135deg, #1a0a2a, #5f3dc4);
   color: #fff;
   padding: 30px 10px;
   box-shadow: 0 0 15px rgba(111, 66, 255, 0.6);
   position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw; /* garantiza ancho total sin cortes */
+  z-index: 2;
 }
 
+.header::before {
+  /* evita que el gradiente se corte en pantallas con "safe areas" */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #1a0a2a, #5f3dc4);
+  z-index: -1;
+}
+
+/* CONTENEDOR INTERNO */
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: 900px;
-  margin: auto;
+  margin: 0 auto;
   padding: 0 15px;
 }
 
@@ -160,17 +168,23 @@ h2 {
 
 /* === FOOTER === */
 .footer {
-  width: 100vw;
+  width: 100%;
   background: linear-gradient(135deg, #1a0a2a, #3a0ca3);
   color: #d8b4ff;
   text-align: center;
-  padding: 15px 20px;
+  padding: 20px 15px;
   box-shadow: 0 -3px 10px rgba(111, 66, 255, 0.3);
   position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  z-index: 2;
+}
+
+.footer::before {
+  /* asegura que el gradiente cubra todo el ancho real del dispositivo */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #1a0a2a, #3a0ca3);
+  z-index: -1;
 }
 
 .footer a {
@@ -184,7 +198,6 @@ h2 {
 
 @media (max-width: 600px) {
   .footer {
-    padding: 20px 15px;
     font-size: 0.9rem;
   }
 }
@@ -251,7 +264,7 @@ h2 {
   height: 100%;
 }
 
-/* === CODE CARD (repositorios) === */
+/* === CODE CARD === */
 .code-card {
   display: flex;
   align-items: center;
