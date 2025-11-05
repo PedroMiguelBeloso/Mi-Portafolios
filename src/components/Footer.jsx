@@ -8,7 +8,7 @@ export default function Footer() {
           rel="noreferrer"
           className="contact-btn"
         >
-          📧 Escribeme: Pbelosoberdun@gmail.com
+          📧 Escríbeme: Pbelosoberdun@gmail.com
         </a>
       </p>
       <p>

@@ -8,12 +8,12 @@ export default function Projects() {
 
       <p>
         Bienvenidos, soy Pedro y este es mi portafolio. Aquí podrán ver mis
-        proyectos personales y los realizados en la facultad. Cada tarjeta tiene
-        botones: al hacer clic en "Ver detalles" podrán leer más sobre cada
-        proyecto (qué se buscaba lograr, tecnologías usadas, capturas funcionales
-        ) y ver un video mostrando la aplicación en
-        funcionamiento. También encontrarán un enlace al repositorio en GitHub
-        para revisar el código completo.
+        proyectos personales, realizados en la facultad. Cada tarjeta
+        tiene botones: al hacer clic en "Ver detalles" podrán leer más sobre cada
+        proyecto (qué se buscaba lograr, tecnologías usadas, capturas
+        funcionales ) y ver un video mostrando la aplicación en funcionamiento.
+        También encontrarán un enlace al repositorio en GitHub para revisar el
+        código completo y leer el Readme.
       </p>
 
       <div className="card">
@@ -23,7 +23,8 @@ export default function Projects() {
           Core).
         </p>
         <p>
-          <strong>Tecnologías:</strong> ASP.NET Core MVC, Entity Framework Core, SQL Server, Razor, Bootstrap, HTML/CSS/JavaScript
+          <strong>Tecnologías:</strong> ASP.NET Core MVC, Entity Framework Core,
+          SQL Server, Razor, Bootstrap, HTML/CSS/JavaScript
         </p>
         <div style={{ marginTop: 8 }}>
           <Link to="/proyectos/patitas-y-corazones" className="btn">
@@ -39,7 +40,7 @@ export default function Projects() {
           <strong>Tecnologías:</strong> React, Vite, JavaScript, HTML, CSS
         </p>
         <div style={{ marginTop: 8 }}>
-            <Link to="/proyectos/the-market-place" className="btn">
+          <Link to="/proyectos/the-market-place" className="btn">
             Ver detalles
           </Link>
         </div>
