@@ -1,9 +1,16 @@
 /* === ESTILOS GLOBALES === */
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+* {
+  box-sizing: border-box;
+}
+
+html, body {
   margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
   background: #0a0a0a;
   color: #e0e0e0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
 }
 
@@ -16,34 +23,36 @@ a {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden; /* evita cortes horizontales */
 }
 
 .container {
   flex: 1;
   padding: 20px 15px;
-  max-width: 900px;
   width: 100%;
+  max-width: 900px;
   margin: auto;
 }
 
 /* === HEADER === */
 .header {
-  width: 100%;
-  max-width: 100%;
+  width: 100vw;
   background: linear-gradient(135deg, #1a0a2a, #5f3dc4);
   color: #fff;
   padding: 30px 10px;
   box-shadow: 0 0 15px rgba(111, 66, 255, 0.6);
-  box-sizing: border-box;
-  left: 0;
-  right: 0;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw; /* garantiza ancho total sin cortes */
 }
 
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
   max-width: 900px;
   margin: auto;
   padding: 0 15px;
@@ -57,8 +66,8 @@ a {
 }
 
 .logo-photo {
-  width: 150px;
-  height: 150px;
+  width: 155px;
+  height: 155px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid rgba(255, 255, 255, 0.15);
@@ -151,17 +160,17 @@ h2 {
 
 /* === FOOTER === */
 .footer {
-  width: 100%;
-  max-width: 100%;
-  text-align: center;
-  padding: 15px 20px;
+  width: 100vw;
   background: linear-gradient(135deg, #1a0a2a, #3a0ca3);
   color: #d8b4ff;
+  text-align: center;
+  padding: 15px 20px;
   box-shadow: 0 -3px 10px rgba(111, 66, 255, 0.3);
-  min-height: auto;
-  box-sizing: border-box;
-  left: 0;
-  right: 0;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 
 .footer a {
