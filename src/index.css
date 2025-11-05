@@ -20,8 +20,9 @@ a {
 
 .container {
   flex: 1;
-  padding: 20px 25px;
+  padding: 20px 15px;
   max-width: 900px;
+  width: 100%;
   margin: auto;
 }
 
@@ -39,6 +40,7 @@ a {
   align-items: center;
   max-width: 900px;
   margin: auto;
+  padding: 0 15px;
 }
 
 /* FOTO + NOMBRE */
@@ -49,8 +51,8 @@ a {
 }
 
 .logo-photo {
-  width: 150px;
-  height: 150px;
+  width: 155px;
+  height: 155px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid rgba(255, 255, 255, 0.15);
@@ -89,7 +91,18 @@ a {
 @media (max-width: 600px) {
   .header-container {
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar a {
+    padding: 8px 16px;
   }
 }
 
@@ -133,11 +146,11 @@ h2 {
 /* === FOOTER === */
 .footer {
   text-align: center;
-  padding: 20px;
+  padding: 15px 20px;
   background: linear-gradient(135deg, #1a0a2a, #3a0ca3);
   color: #d8b4ff;
   box-shadow: 0 -3px 10px rgba(111, 66, 255, 0.3);
-  min-height: 70px;
+  min-height: auto;
 }
 
 .footer a {
@@ -147,6 +160,13 @@ h2 {
 .footer a:hover {
   color: #fff;
   text-shadow: 0 0 8px #bb86fc;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 20px 15px;
+    font-size: 0.9rem;
+  }
 }
 
 /* === BOTÓN DE CONTACTO === */
