@@ -24,7 +24,7 @@ export default function TheMarketPlace() {
 
   return (
     <section>
-      <h1>🛍️ The Market Trail</h1>
+      <h1>The Market Trail</h1>
 
       <p>
         The Market Trail es una SPA construida con React y Vite que consume la
@@ -43,7 +43,7 @@ export default function TheMarketPlace() {
         <strong>Tecnologías:</strong> React, Vite, JavaScript, HTML, CSS
       </p>
 
-      <h3>📸 Capturas</h3>
+      <h3>Capturas</h3>
 
       <div style={{ display: "flex", justifyContent: "center" }}>
         <div className="market-container">
@@ -69,7 +69,7 @@ export default function TheMarketPlace() {
         </div>
       </div>
 
-      <h3 style={{ marginTop: 20 }}>🎬 Demo</h3>
+      <h3 style={{ marginTop: 20 }}>Demo</h3>
       <div className="video-container">
         <iframe
           src="https://www.youtube.com/embed/NqQ23YfXCaY"

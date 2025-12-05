@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
 
-import img1 from "../../assets/P&P1.png";
-import img2 from "../../assets/P&P2.png";
-import img3 from "../../assets/P&P3.png";
-import img4 from "../../assets/P&P4.png";
-import img5 from "../../assets/P&P5.png";
-import img6 from "../../assets/P&P6.png";
-import img7 from "../../assets/P&P7.png";
-import img8 from "../../assets/P&P8.png";
-import img9 from "../../assets/P&P9.png";
+import img1 from "../../assets/appdoptame1.jpg";
+import img2 from "../../assets/appdoptame2.jpg";
+import img3 from "../../assets/appdoptame3.jpg";
+import img4 from "../../assets/appdoptame4.jpg";
+import img5 from "../../assets/appdoptame5.jpg";
+import img6 from "../../assets/appdoptame6.jpg";
+import img7 from "../../assets/appdoptame7.jpg";
+import img8 from "../../assets/appdoptame8.jpg";  
+import img9 from "../../assets/appdoptame9.jpg";  
 
-export default function PatitasYCorazones() {
+export default function Appdoptame() {
   const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9];
   const [index, setIndex] = useState(0);
 
@@ -18,30 +18,35 @@ export default function PatitasYCorazones() {
     const t = setInterval(() => {
       setIndex((i) => (i + 1) % images.length);
     }, 4000);
+
     return () => clearInterval(t);
   }, []);
 
   return (
-    <section>
-      <h1>Patitas & Corazones</h1>
+    <section> 
+      <h1>AppDoptame — API RESTfull para Adopciones</h1>
 
       <p>
-        Patitas & Corazones es una aplicación web construida con ASP.NET Core
-        MVC para gestionar publicaciones y usuarios relacionados con mascotas.
-        Desarrollada como proyecto de práctica, implementa autenticación,
-        operaciones CRUD y acceso a base de datos mediante Entity Framework
-        Core.
+        AppDoptame es una API RESTfull desarrollada con Node.js, Express y MongoDB.
+        Permite realizar publicaciones de animales en adopción y gestionar usuarios.
+        Fue creada como proyecto final de la materia "Programación en Nuevas Tecnologías 2" (ORT) por estudiantes.
+        La misma integra APIs como Nodemailer para envíos de correos electrónicos cada vez que un animal es cargado.
+        También se implementó Multer para la carga de imágenes.
+        La app cuenta con un front-end básico que permite interactuar con la API, evitando el uso de Postman u otras herramientas similares.
+        Tambien, dentro del proyecto se implementaron 2 tests, uno de integración y otro unitario, para asegurar el correcto funcionamiento de la API,
+        utilizando Jest y Supertest, El unitario verifica la implementacion de verificacion de edad de los animales, la cual esta estimada entre los 0 a 20 años, mientras que el de integracion 
+        chequea la conexion a la base de datos de MongoDB, realiza un get de las mascotas registradas validando que la respuesta sea correcta estatus 200 
+        tambien carga usuarios de prueba y devuelve estatus 201 al crear un nuevo usuario.
       </p>
 
       <p>
-        <strong>Funciones principales:</strong> gestión de usuarios y
-        publicaciones sobre mascotas, autenticación con cookies, vistas Razor y
-        persistencia en SQL Server.
+        <strong>Funciones principales:</strong> gestión de animales en adopción,
+        registro de usuarios, autenticación, carga de imágenes y envío de correos
+        electrónicos.
       </p>
 
       <p>
-        <strong>Tecnologías:</strong> ASP.NET Core MVC, Entity Framework Core,
-        SQL Server, Razor, Bootstrap, HTML/CSS/JavaScript
+        <strong>Tecnologías:</strong> Node.js, Express, MongoDB, Mongoose, JWT, REST API, Nodemailer, Multer
       </p>
 
       <h3>Capturas</h3>
@@ -51,7 +56,7 @@ export default function PatitasYCorazones() {
           <div style={{ textAlign: "center" }}>
             <img
               src={images[index]}
-              alt={`Patitas & Corazones - captura ${index + 1}`}
+              alt={`AppDoptame - captura ${index + 1}`}
               className="market-main"
             />
           </div>
@@ -73,8 +78,8 @@ export default function PatitasYCorazones() {
       <h3 style={{ marginTop: 20 }}>Demo</h3>
       <div className="video-container">
         <iframe
-          src="https://www.youtube.com/embed/zpH3d9Cf-sU"
-          title="Demo Patitas & Corazones"
+          src="https://www.youtube.com/embed/XXXXXXXX"
+          title="Demo AppDoptame"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
@@ -100,13 +105,12 @@ export default function PatitasYCorazones() {
         <div className="code-card-body">
           <h3>Código fuente</h3>
           <p>
-            Repositorio del proyecto <strong>Patitas & Corazones</strong> en
-            GitHub.
+            Repositorio del proyecto <strong>AppDoptame</strong> en GitHub.
           </p>
         </div>
 
         <a
-          href="https://github.com/PedroMiguelBeloso/Patitas-Corazones.git"
+          href="https://github.com/PedroMiguelBeloso/TP2-Trabajo-Practico-final.git"
           target="_blank"
           rel="noreferrer noopener"
           className="contact-btn"

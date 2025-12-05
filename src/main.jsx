@@ -8,7 +8,10 @@ import About from "./pages/about.jsx";
 import Projects from "./pages/Projects.jsx";
 import Contact from "./pages/Contact.jsx";
 import PatitasYCorazones from "./pages/projects/PatitasYCorazones.jsx";
-import TheMarketPlace from "./pages/projects/TheMarketPlace.jsx";
+import TheMarketPlace from "./pages/projects/TheMarketTrail.jsx";
+import Appdoptame from "./pages/projects/Appdoptame.jsx";
+
+
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -21,6 +24,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="contacto" element={<Contact />} />
           <Route path="proyectos/patitas-y-corazones" element={<PatitasYCorazones />} />
           <Route path="proyectos/the-market-place" element={<TheMarketPlace />} />
+          <Route path="proyectos/appdoptame" element={<Appdoptame />} />
         </Route>
       </Routes>
     </BrowserRouter>

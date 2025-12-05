@@ -17,7 +17,7 @@ export default function Projects() {
       </p>
 
       <div className="card">
-        <h2>🐾 Patitas&Corazones — Plataforma de Adopción</h2>
+        <h2>Patitas&Corazones — Plataforma de Adopción</h2>
         <p>
           Aplicación para publicar y gestionar adopciones (ASP.NET Core MVC, EF
           Core).
@@ -33,13 +33,27 @@ export default function Projects() {
       </div>
 
       <div className="card" style={{ marginTop: 16 }}>
-        <h2>🛍️ The Market Trail — Consumo de DummyJSON</h2>
+        <h2>The Market Trail — Consumo de DummyJSON</h2>
         <p>Front en React (Vite) que consume una API pública (DummyJSON).</p>
         <p>
           <strong>Tecnologías:</strong> React, Vite, JavaScript, HTML, CSS
         </p>
         <div style={{ marginTop: 8 }}>
             <Link to="/proyectos/the-market-place" className="btn">
+            Ver detalles
+          </Link>
+        </div>
+      </div>
+             <div className="card" style={{ marginTop: 16 }}>
+        <h2>Appdoptame</h2>
+        <p>
+          Aplicación para gestionar adopciones utilizando Node.js, MongoDB y Express.
+        </p>
+        <p>
+          <strong>Tecnologías:</strong> Node.js, MongoDB, Express, Mongoose, JWT, REST API, Nodemailer, Multer
+        </p>
+        <div style={{ marginTop: 8 }}>
+            <Link to="/proyectos/appdoptame" className="btn">
             Ver detalles
           </Link>
         </div>
