@@ -14,19 +14,15 @@ a {
 .layout {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* toda la altura de la ventana */
+  min-height: 100vh;
 }
 
-/* Contenido principal que crece para empujar el footer */
-/* Contenido principal que crece para empujar el footer */
 .container {
-  flex: 1; /* ocupa todo el espacio disponible */
+  flex: 1;
   padding: 20px;
   max-width: 900px;
   margin: auto;
-  /* background: #0a0a0a; */ /* Quitar este fondo */
 }
-
 
 /* === HEADER === */
 .header {
@@ -38,23 +34,71 @@ a {
 
 .header-container {
   display: flex;
-  justify-content: space-between; /* logo a la izquierda, nav a la derecha */
+  justify-content: space-between;
   align-items: center;
   max-width: 900px;
   margin: auto;
 }
 
 .header .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.header .avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid rgba(216,180,255,0.18);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+@media (max-width: 900px) {
+  .header .avatar {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header .avatar {
+    width: 64px;
+    height: 64px;
+  }
+
+  .header .logo {
+    font-size: 1.15rem;
+  }
+}
+
+/* Logo container: avatar and name side-by-side */
+.header .logo-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+@media (max-width: 480px) {
+  .header .logo-container {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .header-container {
+    justify-content: center;
+    gap: 12px;
+  }
 }
 
 .navbar ul {
-  display: flex; /* los botones en fila */
+  display: flex;
   list-style: none;
   padding: 0;
   margin: 0;
-  gap: 20px; /* espacio entre botones */
+  gap: 20px;
 }
 
 .navbar a {
@@ -180,35 +224,7 @@ h2 {
   height: 100%;
 }
 
-/* Código: tarjeta para enlaces a repositorios */
-.code-card {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  justify-content: space-between;
-  padding: 12px;
-  border-radius: 8px;
-  background: linear-gradient(180deg, rgba(111,66,255,0.04), rgba(0,0,0,0.12));
-}
-
-.code-card .code-card-icon {
-  width: 40px;
-  height: 40px;
-  flex: 0 0 40px;
-}
-
-.code-card .code-card-body h3 {
-  margin: 0;
-  color: #d8b4ff;
-}
-
-.code-card .code-card-body p {
-  margin: 4px 0 0 0;
-  color: #cfc9ff;
-  font-size: 0.95rem;
-}
-
-/* === CARRUSEL THE MARKET TRAIL === */
+/* === CARRUSEL MARKET TRAIL === */
 .market-main {
   width: 100%;
   height: 270px;
@@ -257,4 +273,90 @@ h2 {
 .code-card .code-card-body {
   flex: 1;
   margin-left: 8px;
+}
+
+/* Compact code card used in project pages */
+.code-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px; /* reduce vertical size */
+  background: linear-gradient(135deg, rgba(26,10,42,0.6), rgba(58,12,163,0.25));
+}
+
+.code-card-icon {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  display: inline-block;
+}
+
+.code-card .code-card-body h3 {
+  margin: 0 0 4px 0;
+  font-size: 1rem;
+}
+
+.code-card .code-card-body p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.code-card .code-card-btn {
+  margin-left: 12px;
+  padding: 6px 12px;
+}
+
+@media (max-width: 520px) {
+  .code-card {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .code-card .code-card-body {
+    margin-left: 0;
+  }
+
+  .code-card .code-card-btn {
+    margin-left: 0;
+    align-self: center;
+  }
+}
+
+/* === MINI CARRUSEL PARA TARJETAS === */
+.mini-carousel {
+  width: 100%;
+  height: 110px;
+  overflow: hidden;
+  border-radius: 6px;
+  border: 1px solid rgba(139, 92, 246, 0.4);
+  box-shadow: 0 0 10px rgba(111, 66, 255, 0.22);
+  margin-bottom: 12px;
+}
+
+.mini-carousel img {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  transition: opacity 0.35s ease-out;
+}
+.code-card-btn {
+  display: inline-block;
+  padding: 6px 14px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  background: #6b21a8;
+  color: #fff;
+  font-weight: 600;
+  border: 1px solid #8a2be2;
+  transition: 0.25s ease;
+  white-space: nowrap;
+}
+
+.code-card-btn:hover {
+  background: #8a2be2;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
 }

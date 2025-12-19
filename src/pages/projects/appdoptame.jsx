@@ -7,8 +7,8 @@ import img4 from "../../assets/appdoptame4.jpg";
 import img5 from "../../assets/appdoptame5.jpg";
 import img6 from "../../assets/appdoptame6.jpg";
 import img7 from "../../assets/appdoptame7.jpg";
-import img8 from "../../assets/appdoptame8.jpg";  
-import img9 from "../../assets/appdoptame9.jpg";  
+import img8 from "../../assets/appdoptame8.jpg";
+import img9 from "../../assets/appdoptame9.jpg";
 
 export default function Appdoptame() {
   const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9];
@@ -18,12 +18,11 @@ export default function Appdoptame() {
     const t = setInterval(() => {
       setIndex((i) => (i + 1) % images.length);
     }, 4000);
-
     return () => clearInterval(t);
   }, []);
 
   return (
-    <section> 
+    <section>
       <h1>AppDoptame — API RESTfull para Adopciones</h1>
 
       <p>
@@ -104,16 +103,14 @@ export default function Appdoptame() {
 
         <div className="code-card-body">
           <h3>Código fuente</h3>
-          <p>
-            Repositorio del proyecto <strong>AppDoptame</strong> en GitHub.
-          </p>
+          <p>Repositorio del proyecto <strong>AppDoptame</strong> en GitHub.</p>
         </div>
 
         <a
           href="https://github.com/PedroMiguelBeloso/TP2-Trabajo-Practico-final.git"
           target="_blank"
           rel="noreferrer noopener"
-          className="contact-btn"
+          className="code-card-btn"
         >
           Ver en GitHub
         </a>

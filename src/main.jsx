@@ -9,7 +9,7 @@ import Projects from "./pages/Projects.jsx";
 import Contact from "./pages/Contact.jsx";
 import PatitasYCorazones from "./pages/projects/PatitasYCorazones.jsx";
 import TheMarketPlace from "./pages/projects/TheMarketTrail.jsx";
-import Appdoptame from "./pages/projects/Appdoptame.jsx";
+import Appdoptame from "./pages/projects/appdoptame.jsx";
 
 
 
